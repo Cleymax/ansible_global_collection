@@ -1,0 +1,70 @@
+sequenceDiagram
+    autonumber
+    participant AWX as "AWX/AAP Job"
+    participant AE as "Ansible Executor"
+    participant VSP as "VaultSSH Connection Plugin"
+    participant Vault as "Vault (hvac Client)"
+    participant K8sVol as "K8s Projected Volume"
+    participant VJ as "Vault JWT Auth Backend"
+    participant SSH as "Parent SSH Plugin"
+    participant RH as "Remote Host"
+
+    AWX->>AE: Launch job and run task for target host
+    AE->>VSP: Instantiate vault_ssh connection plugin
+    Note over VSP: vault_ssh extends the built-in ssh connection plugin
+
+    AE->>VSP: Request connection (_connect())
+    VSP->>VSP: Build hvac.Client(url, namespace, TLS options)
+    VSP->>Vault: Authenticate using configured method
+    alt token authentication
+        VSP->>Vault: Set client.token from vault_token or token file
+        Vault-->>VSP: Token accepted: authenticated client
+    else AppRole authentication
+        VSP->>Vault: auth.approle.login(role_id, secret_id, mount_point)
+        Vault-->>VSP: Authenticated client token and lease duration
+    else JWT authentication
+        VSP->>K8sVol: Read JWT token file at ansible_vault_jwt_path
+        K8sVol-->>VSP: Projected service account JWT
+        VSP->>VSP: Parse JWT claims: check exp (not expired), nbf (not before), and aud matches ansible_vault_jwt_audience
+        alt Local JWT validation fails
+            VSP-->>AE: Raise AnsibleConnectionFailure: stop connection flow
+        else Local JWT validation succeeds
+            VSP->>VJ: hvac client.auth.jwt.jwt_login(role, jwt, mount_point)
+            Note over VJ: Verify JWT signature via K8s API / OIDC discovery: check bound_audiences and bound_service_account_names/namespaces
+            VJ->>VJ: Call Kubernetes TokenReview API to validate service-account identity
+            VJ-->>VJ: TokenReview response / token identity
+            VJ-->>Vault: Client token with policies
+            Vault-->>VSP: Authenticated client token and lease duration
+        end
+    end
+
+    VSP->>VSP: Render vault_secret_path for target host
+    VSP->>Vault: Read KV v1/v2 secret at mount/path
+    Vault-->>VSP: Credential secret data
+
+    VSP->>VSP: Resolve username, password, private_key, become_password
+    opt private_key is present
+        VSP->>VSP: Write PEM private key to 0600 temporary file
+        VSP->>VSP: Set private_key_file to temporary file path
+    end
+    VSP->>VSP: Inject options: ansible_user (remote_user), password, private_key_file, become_password
+    VSP->>SSH: Call super()._connect() / delegate to parent ssh plugin
+    SSH->>RH: Establish SSH connection using resolved options
+    RH-->>SSH: SSH session established
+    SSH-->>VSP: Connected transport
+    VSP-->>AE: Return connected channel
+    AE-->>AWX: Execute task over SSH and report result
+
+    alt reset connection
+        AE->>VSP: reset()
+        VSP->>SSH: Delegate reset / close control socket
+        SSH-->>VSP: Reset complete
+        VSP->>VSP: Clean up temporary private-key file
+        VSP-->>AE: Reset complete: allow credential re-resolution
+    else close connection
+        AE->>VSP: close()
+        VSP->>SSH: Delegate close
+        SSH-->>VSP: Close complete
+        VSP->>VSP: Clean up temporary private-key file
+        VSP-->>AE: Closed
+    end
