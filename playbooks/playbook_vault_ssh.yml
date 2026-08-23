@@ -4,10 +4,14 @@
   connection: cleymax.ansible_global_collection.vault_ssh
   gather_facts: false
   tasks:
-    - name: Get the current user
-      ansible.builtin.debug:
-        msg: "Current user is {{ ansible_user_id }}"
-      failed_when: false
     - name: Sleep 30s
       ansible.builtin.pause:
         seconds: 30
+    - name: Setup
+      ansible.builtin.setup:
+        filter:
+          - ansible_distribution*
+          - ansible_user_id
+    - name: Display ansible_distribution
+      ansible.builtin.debug:
+        msg: "ansible_distribution={{ ansible_distribution }} ansible_user_id={{ ansible_user_id }}"
