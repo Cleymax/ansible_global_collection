@@ -1,0 +1,6 @@
+---
+collections:
+  - name: cleymax.ansible_global_collection
+    version: 1.0.0
+    type: git
+    source: git+https://github.com/Cleymax/ansible_global_collection.git,master
