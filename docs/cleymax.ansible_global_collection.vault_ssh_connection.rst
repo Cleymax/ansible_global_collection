@@ -75,7 +75,7 @@ Parameters
       </li>
       <li>
         <p>Variable: ansible_control_path</p>
-        <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.7</i></p>
+        <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.7</i></p>
 
       </li>
       </ul>
@@ -109,7 +109,7 @@ Parameters
       </li>
       <li>
         <p>Variable: ansible_control_path_dir</p>
-        <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.7</i></p>
+        <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.7</i></p>
 
       </li>
       </ul>
@@ -172,7 +172,7 @@ Parameters
 
         <pre>[ssh_connection]
   host_key_checking = true</pre>
-        <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.5</i></p>
+        <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.5</i></p>
 
       </li>
       <li>
@@ -181,17 +181,17 @@ Parameters
       </li>
       <li>
         <p>Environment variable: <code>ANSIBLE_SSH_HOST_KEY_CHECKING</code></p>
-        <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.5</i></p>
+        <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.5</i></p>
 
       </li>
       <li>
         <p>Variable: ansible_host_key_checking</p>
-        <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.5</i></p>
+        <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.5</i></p>
 
       </li>
       <li>
         <p>Variable: ansible_ssh_host_key_checking</p>
-        <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.5</i></p>
+        <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.5</i></p>
 
       </li>
       </ul>
@@ -234,7 +234,7 @@ Parameters
       <p style="font-size: small; margin-bottom: 0;">
         <span style="color: purple;">string</span>
       </p>
-      <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.19</i></p>
+      <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.19</i></p>
 
     </td>
     <td valign="top">
@@ -326,7 +326,7 @@ Parameters
       <p style="font-size: small; margin-bottom: 0;">
         <span style="color: purple;">string</span>
       </p>
-      <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.12</i></p>
+      <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.12</i></p>
 
     </td>
     <td valign="top">
@@ -398,7 +398,7 @@ Parameters
       <p style="font-size: small; margin-bottom: 0;">
         <span style="color: purple;">string</span>
       </p>
-      <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.19</i></p>
+      <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.19</i></p>
 
     </td>
     <td valign="top">
@@ -467,7 +467,7 @@ Parameters
       <p style="font-size: small; margin-bottom: 0;">
         <span style="color: purple;">string</span>
       </p>
-      <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.19</i></p>
+      <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.19</i></p>
 
     </td>
     <td valign="top">
@@ -522,7 +522,7 @@ Parameters
       </li>
       <li>
         <p>Variable: ansible_ssh_retries</p>
-        <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.7</i></p>
+        <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.7</i></p>
 
       </li>
       </ul>
@@ -580,7 +580,7 @@ Parameters
       <p style="font-size: small; margin-bottom: 0;">
         <span style="color: purple;">string</span>
       </p>
-      <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.6</i></p>
+      <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.6</i></p>
 
     </td>
     <td valign="top">
@@ -600,7 +600,7 @@ Parameters
       </li>
       <li>
         <p>Variable: ansible_scp_executable</p>
-        <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.7</i></p>
+        <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.7</i></p>
 
       </li>
       </ul>
@@ -625,12 +625,12 @@ Parameters
         <p>INI entry</p>
         <pre>[ssh_connection]
   scp_extra_args = &#34;&#34;</pre>
-        <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.7</i></p>
+        <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.7</i></p>
 
       </li>
       <li>
         <p>Environment variable: <code>ANSIBLE_SCP_EXTRA_ARGS</code></p>
-        <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.7</i></p>
+        <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.7</i></p>
 
       </li>
       <li>
@@ -677,7 +677,7 @@ Parameters
       </li>
       <li>
         <p>Variable: ansible_sftp_batch_mode</p>
-        <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.7</i></p>
+        <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.7</i></p>
 
       </li>
       </ul>
@@ -691,7 +691,7 @@ Parameters
       <p style="font-size: small; margin-bottom: 0;">
         <span style="color: purple;">string</span>
       </p>
-      <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.6</i></p>
+      <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.6</i></p>
 
     </td>
     <td valign="top">
@@ -711,7 +711,7 @@ Parameters
       </li>
       <li>
         <p>Variable: ansible_sftp_executable</p>
-        <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.7</i></p>
+        <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.7</i></p>
 
       </li>
       </ul>
@@ -736,12 +736,12 @@ Parameters
         <p>INI entry</p>
         <pre>[ssh_connection]
   sftp_extra_args = &#34;&#34;</pre>
-        <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.7</i></p>
+        <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.7</i></p>
 
       </li>
       <li>
         <p>Environment variable: <code>ANSIBLE_SFTP_EXTRA_ARGS</code></p>
-        <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.7</i></p>
+        <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.7</i></p>
 
       </li>
       <li>
@@ -782,7 +782,7 @@ Parameters
       </li>
       <li>
         <p>Variable: ansible_ssh_args</p>
-        <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.7</i></p>
+        <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.7</i></p>
 
       </li>
       </ul>
@@ -807,12 +807,12 @@ Parameters
         <p>INI entry</p>
         <pre>[ssh_connection]
   ssh_common_args = &#34;&#34;</pre>
-        <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.7</i></p>
+        <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.7</i></p>
 
       </li>
       <li>
         <p>Environment variable: <code>ANSIBLE_SSH_COMMON_ARGS</code></p>
-        <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.7</i></p>
+        <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.7</i></p>
 
       </li>
       <li>
@@ -834,7 +834,7 @@ Parameters
       <p style="font-size: small; margin-bottom: 0;">
         <span style="color: purple;">string</span>
       </p>
-      <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.2</i></p>
+      <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.2</i></p>
 
     </td>
     <td valign="top">
@@ -855,7 +855,7 @@ Parameters
       </li>
       <li>
         <p>Variable: ansible_ssh_executable</p>
-        <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.7</i></p>
+        <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.7</i></p>
 
       </li>
       </ul>
@@ -880,12 +880,12 @@ Parameters
         <p>INI entry</p>
         <pre>[ssh_connection]
   ssh_extra_args = &#34;&#34;</pre>
-        <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.7</i></p>
+        <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.7</i></p>
 
       </li>
       <li>
         <p>Environment variable: <code>ANSIBLE_SSH_EXTRA_ARGS</code></p>
-        <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.7</i></p>
+        <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.7</i></p>
 
       </li>
       <li>
@@ -945,7 +945,7 @@ Parameters
       </li>
       <li>
         <p>Variable: ansible_ssh_transfer_method</p>
-        <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.12</i></p>
+        <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.12</i></p>
 
       </li>
       </ul>
@@ -959,7 +959,7 @@ Parameters
       <p style="font-size: small; margin-bottom: 0;">
         <span style="color: purple;">string</span>
       </p>
-      <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.10</i></p>
+      <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.10</i></p>
 
     </td>
     <td valign="top">
@@ -1010,7 +1010,7 @@ Parameters
 
         <pre>[ssh_connection]
   timeout = 10</pre>
-        <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.11</i></p>
+        <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.11</i></p>
 
       </li>
       <li>
@@ -1019,7 +1019,7 @@ Parameters
       </li>
       <li>
         <p>Environment variable: <code>ANSIBLE_SSH_TIMEOUT</code></p>
-        <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.11</i></p>
+        <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.11</i></p>
 
       </li>
       <li>
@@ -1028,7 +1028,7 @@ Parameters
       </li>
       <li>
         <p>Variable: ansible_ssh_timeout</p>
-        <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.11</i></p>
+        <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.11</i></p>
 
       </li>
       </ul>
@@ -1042,7 +1042,7 @@ Parameters
       <p style="font-size: small; margin-bottom: 0;">
         <span style="color: purple;">boolean</span>
       </p>
-      <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.5</i></p>
+      <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.5</i></p>
 
     </td>
     <td valign="top">
@@ -1067,7 +1067,7 @@ Parameters
       </li>
       <li>
         <p>Variable: ansible_ssh_use_tty</p>
-        <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.7</i></p>
+        <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.7</i></p>
 
       </li>
       </ul>
@@ -2041,7 +2041,7 @@ Parameters
       <p style="font-size: small; margin-bottom: 0;">
         <span style="color: purple;">integer</span>
       </p>
-      <p><i style="font-size: small; color: darkgreen;">added in cleymax.ansible_global_collection 2.19</i></p>
+      <p><i style="font-size: small; color: darkgreen;">added in ansible.posix 2.19</i></p>
 
     </td>
     <td valign="top">
