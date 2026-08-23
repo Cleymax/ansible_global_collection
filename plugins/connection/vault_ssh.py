@@ -369,7 +369,6 @@ _base['name'] = _ours['name']
 _base['short_description'] = _ours['short_description']
 _base['description'] = _ours['description']
 _base['author'] = _ours['author']
-_base['version_added'] = _ours['version_added']
 DOCUMENTATION = yaml.dump(_base, default_flow_style=False, sort_keys=False)
 
 
