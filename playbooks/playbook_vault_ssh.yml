@@ -1,0 +1,8 @@
+---
+- name: Test vault_ssh connection plugin
+  hosts: all
+  connection: cleymax.ansible_global_collection.vault_ssh
+  tasks:
+    - name: Get the current user
+      ansible.builtin.debug:
+        msg: "Current user is {{ ansible_user_id }}"
