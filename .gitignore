@@ -1,0 +1,3 @@
+tests/output
+.ansible
+.venv

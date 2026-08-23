@@ -1,0 +1,32 @@
+namespace: cleymax
+name: ansible_global_collection
+version: 1.0.0
+readme: README.md
+authors:
+  - Clément (Cleymax) Perrin <github@clementperrin.fr>
+
+description: Ansible collection for several global roles and plugins. This collection is intended to be used as a dependency for other collections.
+
+license:
+  - GPL-3.0-or-later
+
+license_file: "LICENSE"
+
+tags:
+  - ssh
+  - vault
+  - linux
+  - windows
+  - server
+
+dependencies:
+  ansible.posix: ">=2.0.0"
+
+repository: https://github.com/Cleymax/ansible_global_collection
+documentation: https://github.com/Cleymax/ansible_global_collection/wiki
+issues: https://github.com/Cleymax/ansible_global_collection/issues
+
+build_ignore:
+  - .github
+  - .venv
+  - tests/output
