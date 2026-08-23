@@ -6,3 +6,6 @@
     - name: Get the current user
       ansible.builtin.debug:
         msg: "Current user is {{ ansible_user_id }}"
+    - name: Sleep 30s
+      ansible.builtin.pause:
+        seconds: 30
