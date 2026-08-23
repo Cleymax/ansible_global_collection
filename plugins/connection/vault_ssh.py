@@ -28,7 +28,7 @@ options:
     type: bool
     default: true
     env:
-      - name: ANSIBLE_VAULT_SSH_ENABLED
+      - name: ANSIBLE_HASHI_VAULT_SSH_ENABLED
     ini:
       - section: vault_ssh_connection
         key: enabled
@@ -74,7 +74,7 @@ options:
       - token
     default: token
     env:
-      - name: ANSIBLE_VAULT_AUTH_METHOD
+      - name: ANSIBLE_HASHI_VAULT_AUTH_METHOD
     ini:
       - section: vault_ssh_connection
         key: auth_method
@@ -98,7 +98,7 @@ options:
     type: string
     default: ~/.vault-token
     env:
-      - name: ANSIBLE_VAULT_TOKEN_FILE
+      - name: ANSIBLE_HASHI_VAULT_TOKEN_FILE
     ini:
       - section: vault_ssh_connection
         key: token_file
@@ -130,7 +130,7 @@ options:
     type: string
     default: approle
     env:
-      - name: ANSIBLE_VAULT_APPROLE_MOUNT
+      - name: ANSIBLE_HASHI_VAULT_APPROLE_MOUNT
     ini:
       - section: vault_ssh_connection
         key: approle_mount_point
@@ -143,7 +143,7 @@ options:
     type: string
     env:
       - name: VAULT_JWT
-      - name: ANSIBLE_VAULT_JWT
+      - name: ANSIBLE_HASHI_VAULT_JWT
     vars:
       - name: ansible_vault_jwt
       - name: vault_jwt
@@ -153,7 +153,7 @@ options:
     type: string
     default: /var/run/secrets/kubernetes.io/serviceaccount/token
     env:
-      - name: ANSIBLE_VAULT_JWT_PATH
+      - name: ANSIBLE_HASHI_VAULT_JWT_PATH
     ini:
       - section: vault_ssh_connection
         key: jwt_path
@@ -165,7 +165,7 @@ options:
     type: string
     env:
       - name: VAULT_ROLE
-      - name: ANSIBLE_VAULT_ROLE
+      - name: ANSIBLE_HASHI_VAULT_ROLE
     vars:
       - name: ansible_vault_role
       - name: vault_role
@@ -175,7 +175,7 @@ options:
     type: string
     default: jwt
     env:
-      - name: ANSIBLE_VAULT_JWT_MOUNT
+      - name: ANSIBLE_HASHI_VAULT_JWT_MOUNT
     ini:
       - section: vault_ssh_connection
         key: jwt_mount_point
@@ -190,7 +190,7 @@ options:
     type: string
     required: true
     env:
-      - name: ANSIBLE_VAULT_SECRET_PATH
+      - name: ANSIBLE_HASHI_VAULT_SECRET_PATH
     ini:
       - section: vault_ssh_connection
         key: secret_path
@@ -203,7 +203,7 @@ options:
     type: string
     default: secret
     env:
-      - name: ANSIBLE_VAULT_MOUNT_POINT
+      - name: ANSIBLE_HASHI_VAULT_MOUNT_POINT
     ini:
       - section: vault_ssh_connection
         key: mount_point
@@ -219,7 +219,7 @@ options:
       - "2"
     default: "2"
     env:
-      - name: ANSIBLE_VAULT_KV_VERSION
+      - name: ANSIBLE_HASHI_VAULT_KV_VERSION
     ini:
       - section: vault_ssh_connection
         key: kv_version
@@ -281,7 +281,7 @@ options:
     default: "true"
     env:
       - name: VAULT_SKIP_VERIFY_INVERTED
-      - name: ANSIBLE_VAULT_VERIFY
+      - name: ANSIBLE_HASHI_VAULT_VERIFY
     ini:
       - section: vault_ssh_connection
         key: verify
@@ -317,7 +317,7 @@ options:
     type: int
     default: 30
     env:
-      - name: ANSIBLE_VAULT_TIMEOUT
+      - name: ANSIBLE_HASHI_VAULT_TIMEOUT
     ini:
       - section: vault_ssh_connection
         key: timeout
