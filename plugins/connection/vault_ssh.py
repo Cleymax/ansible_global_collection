@@ -466,6 +466,12 @@ class Connection(SSHConnection):
         self._vault_resolved = False
         self._vault_tmp_key_file = None
         self._vault_secret = {}
+        
+    def get_option(self, option, hostvars=None):
+        if not self._vault_resolved:
+            self._resolve_vault_credentials()
+        return super(Connection, self).get_option(option, hostvars=hostvars)
+
 
     # ------------------------------------------------------------------
     # Helpers
@@ -873,6 +879,7 @@ class Connection(SSHConnection):
         if username:
             current = self._opt('remote_user')
             if not (prefer_static and current):
+                self.user = to_text(username)
                 self.set_option('remote_user', to_text(username))
                 try:
                     self._play_context.remote_user = to_text(username)
